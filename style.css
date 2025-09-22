@@ -1,0 +1,18 @@
+* {
+    outline: none;
+    font-family: sans-serif;
+}
+body {
+    width: 100vw;
+    height: 100vw;
+}
+
+main {
+    width: 100vw;
+    height: 100vw;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
