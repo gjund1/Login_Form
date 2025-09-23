@@ -3,6 +3,15 @@ let pwd = document.querySelector("#password")
 let btn = document.querySelector("#button")
 //console.log(mail, pwd, btn)
 
+btn.disabled = true
+
+function validateForm() {
+    let emailValid = mail.value.includes("@")
+    let passwordValid = pwd.value.length >= 8
+
+    btn.disabled = !(emailValid && passwordValid)
+}
+
 btn.addEventListener("click", () => {
     console.log("click")
 })
@@ -21,6 +30,8 @@ pwd.addEventListener("input", (event) => {
         pwd.style.borderColor = "black"
     else if (event.target.value.length < 8)
         pwd.style.borderColor = "red"
-    else
+    else {
         pwd.style.borderColor = "green"
+        btn.disabled = false
+    }
 })
